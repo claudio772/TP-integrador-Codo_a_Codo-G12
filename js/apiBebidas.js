@@ -5,7 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const llamadaAPI = () => {
     const inputBebida = document.querySelector('#inputBuscador').value;
     if (inputBebida.trim() === '') {
-      alert('EL CAMPO ESTA VACIO'); /* CAMBIAR POR OTRA COSA */
+      Swal.fire({
+        title: 'El campo esta vacio',
+        text: 'Coloca el nombre de tu bebida favorita!',
+        icon: 'question',
+      });
       return;
     }
 
@@ -15,10 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.drinks) {
-          console.log(data.drinks); /* BORRAR DESPUES */
           cargarBebidas(data.drinks);
         } else {
-          alert('puto');
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Algo salio mal! No se encontraron bebidas con ese nombre',
+          });
         }
       })
       .catch((error) => console.log('Error encontrado: ', error));
@@ -30,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const cargarBebidas = (bebidas) => {
-    console.log('entra a funcion'); /* BORRAR DESPUES */
     bebidas.forEach((element) => {
       const {
         idDrink,
@@ -72,51 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
               <li>${strIngredient4}</li>
             </ul>
           </div>`);
-      /*       <div class="bebida col-md-3">
-              <h1>${strDrink}</h1>
-              <h2>${strAlcoholic}</h2>
-              <p>${strCategory}</p>
-              <p>${strGlass}</p>
-              <img src="${strDrinkThumb}" alt="${strDrink}" class="img-fluid rounded"/>
-              <p>${idDrink}</p>
-              <h3>Estilo: ${strIBA}</h3>
-              <h4>Ingredientes:</h4>
-              <ul>
-                <li>${strIngredient1}</li>
-                <li>${strIngredient2}</li>
-                <li>${strIngredient3}</li>
-                <li>${strIngredient4}</li> 
-              </ul>
-            </div>
-            
-            <div class="bebida">
-            <div class="bebida-img d-flex">
-              <img
-                src="${strDrinkThumb}"
-                alt="${strDrink}"
-                class="img-fluid rounded"
-              />
-              <div class="bebida-principal flex-direction-column">
-                <h1>${strDrink}</h1>
-                <h2>${strAlcoholic}</h2>
-                <p>${strCategory}</p>
-                <p>${idDrink}</p>
-              </div>
-            </div>
-            <p>${strGlass}</p>
-            <h3>estilo: ${strIBA}</h3>
-            <h4>Ingredientes:</h4>
-            <ul>
-              <li>${strIngredient1}</li>
-              <li>${strIngredient2}</li>
-              <li>${strIngredient3}</li>
-              <li>${strIngredient4}</li>
-            </ul>
-        </div>
-            
-            
-            
-            */
     });
   };
 });

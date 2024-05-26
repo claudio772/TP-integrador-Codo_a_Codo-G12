@@ -30,12 +30,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <!--sweetalert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body>
     <header class="header">
       <nav class="navegacion">
-        <a href="g" class="anclaLogo">
+        <a href="index.html" class="anclaLogo">
           <i class="fa fa-beer" aria-hidden="true"></i>
           <span>TABERNA 12</span>
         </a>
@@ -46,7 +48,7 @@
             <a class="linkNav" href="./pages/registrarse.html">Registrarse</a>
           </li>
           <li class="listaItem">
-            <a href="#" class="linkNav iniciarSesion">Ingresar</a>
+            <a href="./pages/login.html" class="linkNav iniciarSesion">Ingresar</a>
           </li>
         </ul>
       </nav>
@@ -85,35 +87,9 @@
         </form>
       </section>
 
+      <!--buscador de bebidas-->
       <section class="bebidas">
-        <div class="bebidas-container row" id="bebidas">
-          <div class="bebida">
-            <div class="bebida-principal d-flex">
-              <div class="bebida-img">
-                <img
-                  src="imagenes/48331.png"
-                  alt="margarita"
-                  class="img-fluid rounded"
-                />
-              </div>
-              <div class="bebida-info">
-                <h1>margarita</h1>
-                <h2>alcoholica</h2>
-                <p>categoria</p>
-                <p>id</p>
-              </div>
-            </div>
-            <p>Vaso de vidrio</p>
-            <h3>estilo: contemporaneo clasico</h3>
-            <h4>Ingredientes:</h4>
-            <ul>
-              <li>ingrediente 1</li>
-              <li>ingrediente 2</li>
-              <li>ingrediente 3</li>
-              <li>ingrediente 4</li>
-            </ul>
-          </div>
-        </div>
+        <div class="bebidas-container row" id="bebidas"></div>
       </section>
     </main>
     <script src="js/apiBebidas.js"></script>
