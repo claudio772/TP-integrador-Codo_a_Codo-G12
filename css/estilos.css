@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
@@ -201,6 +201,12 @@ body {
       box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
     }
   }
+}
+
+.texto-carta {
+  color: #767676;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* SECCION DE BEBIDAS */
