@@ -1,56 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TABERNA 12</title>
     <!-- iconos -->
-    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f7fb471b65.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- favicon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <!-- hoja de estilos -->
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <!--bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--sweetalert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-
-
-</head>
-
-
-<body>
-
-    <header class= "header">
-        <nav class="navegacion">
-            <a href="g" class="anclaLogo">
-                <i class="fa fa-beer" aria-hidden="true"></i>
-                <span>TABERNA 12</span>
-            </a>
-            <ul class="listaNav">
-                <li class="listaItem"><a href="#" class="linkNav">Promos</a></li>
-                <li class="listaItem"><a href="#" class="linkNav">Premium</a></li>
-                <li class="listaItem"><a class="linkNav" href="./pages/registrarse.html">Registrarse</a></li>
-                <li class="listaItem"><a href="#" class="linkNav iniciarSesion">Ingresar</a></li>
-            </ul>
-        </nav>
+  <body>
+    <header class="header">
+      <nav class="navegacion">
+        <a href="index.html" class="anclaLogo">
+          <i class="fa fa-beer" aria-hidden="true"></i>
+          <span>TABERNA 12</span>
+        </a>
+        <ul class="listaNav">
+          <li class="listaItem">
+            <a href="pages/catalogo.html" class="linkNav">Catalogo</a>
+          </li>
+          <li class="listaItem"><a href="#" class="linkNav">Premium</a></li>
+          <li class="listaItem">
+            <a class="linkNav" href="./pages/registrarse.html">Registrarse</a>
+          </li>
+          <li class="listaItem">
+            <a href="./pages/login.html" class="linkNav iniciarSesion"
+              >Ingresar</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
     <main id="main" class="main">
-        <!-- secion principal -->
-        <section data-aos="zoom-in"  data-aos-duration="1000" class="sectionPrincipal">
-            <h1 class="tituloPrincipal">Todas las bebidas <br> nacional e importadas </h1>
-            <h2 class="subtituloPrincipal"> <br> Beba con moderacion y disfrute responsablemente.</h2>
-            <a class="botonRegistrarse" href="./pages/registrarse.html">Registrate</a>
-        </section>
-    
-         <!-- buscador principal -->
-         <section class="buscadorPrincipal">
-            <h2 class="tituloSection">¿Qué deseas beber hoy?</h2>
-            <form class="buscadorBebidas">
-                <input class="inputBuscador" type="bebida buscada" placeholder="Buscar...">
-                <input class= "botonBuscador"type="submit" value="Buscar">
-            </form>
-        </section>
+      <!-- secion principal -->
+      <section
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        class="sectionPrincipal"
+      >
+        <h1 class="tituloPrincipal">
+          Todas las bebidas <br />
+          nacional e importadas
+        </h1>
+        <h2 class="subtituloPrincipal">
+          <br />
+          Beba con moderacion y disfrute responsablemente.
+        </h2>
+        <a class="botonRegistrarse" href="./pages/registrarse.html"
+          >Registrate</a
+        >
+      </section>
 
+      <!-- buscador principal -->
+      <section class="buscadorPrincipal">
+        <h2 class="tituloSection">¿Qué deseas beber hoy?</h2>
+        <form class="buscadorBebidas" id="buscadorBebidas">
+          <input
+            id="inputBuscador"
+            class="inputBuscador"
+            type="text"
+            placeholder="Buscar..."
+          />
+          <input class="botonBuscador" type="submit" value="Buscar" />
+        </form>
+        <div class="div-texto">
+          <p class="texto-carta">
+            PUEDE BUSCAR TRAGOS COMO: Mojito, Daiquiri, Margarita, Negroni, Dry
+            Martini, Almond Joy, Tenquila Surprise, Green Goblin, Apple Berry
+            Smoothie, etc. <br />
+            O PUEDE BUSCAR POR INGREDIENTES ALCOHOLICOS COMO: Rum, Vodka, Gin y
+            Tequila. <br />POR INREDIENTES RANDOMS COMO: Midori, Raspberry,
+            Sugar o Whisky. <br />
+          </p>
+        </div>
+      </section>
+
+      <!--buscador de bebidas-->
+      <section class="bebidas">
+        <div class="bebidas-container row" id="bebidas"></div>
+      </section>
     </main>
-</body>
+    <script src="js/apiBebidas.js"></script>
+  </body>
 </html>

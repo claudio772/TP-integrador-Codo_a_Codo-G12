@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalogo</title>
+    <!-- iconos -->
+    <script
+      src="https://kit.fontawesome.com/f7fb471b65.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- hoja de estilos -->
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <!--bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--sweetalert2-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="bodyCatalogo">
+    <header class="header">
+      <nav class="navegacion">
+        <a href="../index.html" class="anclaLogo">
+          <i class="fa fa-beer" aria-hidden="true"></i>
+          <span>TABERNA 12</span>
+        </a>
+        <ul class="listaNav">
+          <li class="listaItem">
+            <a href="catalogo.html" class="linkNav">Catalogo</a>
+          </li>
+          <li class="listaItem"><a href="#" class="linkNav">Premium</a></li>
+          <li class="listaItem">
+            <a class="linkNav" href="registrarse.html">Registrarse</a>
+          </li>
+          <li class="listaItem">
+            <a href="login.html" class="linkNav iniciarSesion"
+              >Ingresar</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main >
+      
+      <section  class="bebidasVariedad">
+        <!-- <h1>Podes elegir entre una gran variedad de Tragos!</h1> -->
+        <h3 class="tituloSection">Nuestras variedades</h3>
+            <div class="bebidas" id="tragosContainer">
+              <!-- <a href=".pages/detalle.html">
+                  <div  class="bebida">
+
+                        <img class=imgBebidas src="imgVariedad" src=" .jpg" alt=" el nombre" loading="algo">
+
+                        <div class="tituloBebida">
+                            <h4> El Nombre</h4>
+                        </div>                      
+                  </div>
+              </a> -->
+
+            </div>
+            <button class="boton anterior">Anterior</button>  
+            <button class="boton siguiente">Siguiente</button>
+      </section>
+    </main>
+   <script src="../js/apiBebidas.js"></script>
+   
+  </body>
+</html>
