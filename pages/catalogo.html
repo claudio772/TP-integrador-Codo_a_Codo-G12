@@ -33,7 +33,7 @@
     <!--sweetalert2-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-  <body>
+  <body class="bodyCatalogo">
     <header class="header">
       <nav class="navegacion">
         <a href="../index.html" class="anclaLogo">
@@ -42,24 +42,43 @@
         </a>
         <ul class="listaNav">
           <li class="listaItem">
-            <a href="pages/catalogo.html" class="linkNav">Catalogo</a>
+            <a href="catalogo.html" class="linkNav">Catalogo</a>
           </li>
           <li class="listaItem"><a href="#" class="linkNav">Premium</a></li>
           <li class="listaItem">
             <a class="linkNav" href="registrarse.html">Registrarse</a>
           </li>
           <li class="listaItem">
-            <a href="./pages/login.html" class="linkNav iniciarSesion"
+            <a href="login.html" class="linkNav iniciarSesion"
               >Ingresar</a
             >
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <h1>Podes elegir entre una gran variedad de Tragos!</h1>
+    <main >
+      
+      <section  class="bebidasVariedad">
+        <!-- <h1>Podes elegir entre una gran variedad de Tragos!</h1> -->
+        <h3 class="tituloSection">Nuestras variedades</h3>
+            <div class="bebidas" id="tragosContainer">
+              <!-- <a href=".pages/detalle.html">
+                  <div  class="bebida">
+
+                        <img class=imgBebidas src="imgVariedad" src=" .jpg" alt=" el nombre" loading="algo">
+
+                        <div class="tituloBebida">
+                            <h4> El Nombre</h4>
+                        </div>                      
+                  </div>
+              </a> -->
+
+            </div>
+            <button class="boton anterior">Anterior</button>  
+            <button class="boton siguiente">Siguiente</button>
       </section>
     </main>
+   <script src="/js/apiBebidas.js"></script>
+   
   </body>
 </html>

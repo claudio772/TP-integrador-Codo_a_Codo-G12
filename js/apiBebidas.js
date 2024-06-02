@@ -119,3 +119,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 });
+
+//CATALOGO
+
+
+
+function llamarAPIindex(letra){
+  fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letra}`)
+ .then(response => response.json())
+ .then(drinks => dibujarDatos(drinks));
+}
+
+
+function dibujarDatos(json){
+  const filas = json.drinks.map(obj => Bebidas(obj));//crea un array de los objetows recibidos
+  document.querySelector('.bebidasVariedad .bebidas').innerHTML=filas.join('');
+  
+}
+
+function Bebidas(obj){
+  return `
+  <a> 
+                <div  class="bebida">
+
+                      <img class=imgBebidas  src="${obj.strDrinkThumb}" alt="${obj.strDrink}" loading="lazy">
+
+                      <div class="tituloBebida">
+                          <h4> ${obj.strDrink}</h4>
+                      </div>                      
+                </div>
+            </a>
+
+          `;            
+
+}
+
+llamarAPIindex('c');

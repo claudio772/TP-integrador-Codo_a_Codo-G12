@@ -76,6 +76,126 @@ body {
     }
   }
 }
+/*catalogo*/
+.bodyCatalogo{
+  background-color: #181419;
+
+}
+
+ .bebidasVariedad{
+  
+  width:80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  .tituloSection{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background-color: #181419;
+    color:white;
+  } 
+  .bebidas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:60px;
+  }
+    a{
+       text-decoration: none;
+        color: #ffffff;
+      .bebida{
+         width:200px;
+        height: 300px;  
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+         
+        
+        
+        
+     
+      .imgBebidas{
+        
+          width: 100%;
+          height: 100%; 
+        object-fit: cover;
+          border-radius: 10px;
+          
+         
+      }
+    
+      .tituloBebida{
+          z-index: 2;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          left: 50%;
+          max-width: 20rem;
+          width: 100%;
+          transform: translateY(-50%) translateX(-50%);
+          h4 {
+              font-size: 1.6rem;
+              font-weight: bold;
+              opacity: 0;
+              margin-bottom: 0.5rem;
+              letter-spacing: 0.1rem;
+              transition: opacity 0.5s ease-in-out;
+
+          }
+      }
+      &:hover{
+         box-shadow: 0 0 30px #9f3648cd;
+         transform: scale(0.9);
+        
+      }
+      &:hover .tituloBebida{
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(20px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      &:hover h4 {
+          width: 100%;
+          padding: 0.5rem;
+          opacity: 1;
+      }
+   
+  }
+
+ }
+}
+
+.boton{
+  border: 1px solid white;
+  box-sizing: content-box;
+  margin-top:50px;
+  margin-left:20px;
+  background-color:#9f3647;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom:60px;
+   /* Agregar efecto de botón presionado */
+   transition: transform 0.3s, box-shadow 0.3s;
+   &:hover {
+       background-color: #9f3647;
+       transform: scale(0.95);
+       box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+   }
+
+}
+
+  
+  
+            
+        
 
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
